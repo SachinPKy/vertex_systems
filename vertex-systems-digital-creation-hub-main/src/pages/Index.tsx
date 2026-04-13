@@ -5,8 +5,9 @@ import { ArrowRight, Zap, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
 import { CONTACT_EMAIL, INSTAGRAM_LINK } from '@/lib/constants';
-import { Instagram, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import Logo from '@/components/Logo';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -43,6 +44,9 @@ const Index = () => {
 
         <div className="relative max-w-5xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}>
+            <div className="flex justify-center mb-8">
+              <Logo className="h-32 md:h-48 w-auto" glow={true} />
+            </div>
             <div className="inline-flex items-center space-x-2 border border-primary/20 bg-primary/5 px-4 py-2 rounded-full mb-8">
               <Zap className="w-3.5 h-3.5 text-primary" />
               <span className="text-xs font-medium text-primary tracking-wide uppercase">Premium Digital Services</span>
@@ -79,7 +83,8 @@ const Index = () => {
         <section className="py-24 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
           <div className="relative max-w-7xl mx-auto px-4">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16 flex flex-col items-center">
+              <Logo className="h-16 w-auto mb-6" />
               <motion.p variants={fadeUp} custom={0} className="text-xs font-medium text-primary tracking-widest uppercase mb-3">What We Offer</motion.p>
               <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
                 Our <span className="gradient-text">Services</span>
@@ -127,8 +132,9 @@ const Index = () => {
       {/* Contact CTA */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/[0.03] to-transparent" />
-        <div className="relative max-w-3xl mx-auto px-4 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <div className="relative max-w-3xl mx-auto px-4 text-center flex flex-col items-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-col items-center">
+            <Logo className="h-20 w-auto mb-8" glow={true} />
             <motion.p variants={fadeUp} custom={0} className="text-xs font-medium text-primary tracking-widest uppercase mb-3">Get In Touch</motion.p>
             <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
               Ready to <span className="gradient-text">Get Started?</span>

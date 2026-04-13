@@ -5,6 +5,7 @@ import { Menu, X, LogOut, LayoutDashboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import { ADMIN_EMAIL } from '@/lib/constants';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,14 +52,9 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-18">
-          <Link to="/" className="flex items-center space-x-2.5">
-            <div className="w-9 h-9 rounded-lg gradient-primary flex items-center justify-center glow-blue">
-              <span className="text-white font-bold text-base">V</span>
-            </div>
-            <span className="text-lg font-bold text-foreground tracking-tight">
-              Vertex<span className="gradient-text">Systems</span>
-            </span>
+        <div className="flex items-center justify-between h-24 lg:h-32 transition-all duration-500">
+          <Link to="/" className="flex items-center">
+            <Logo className="h-16 lg:h-24 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center space-x-1">
