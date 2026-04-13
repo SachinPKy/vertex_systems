@@ -6,7 +6,7 @@ import puppeteer from 'puppeteer';
 
     page.on('console', msg => console.log('PAGE LOG:', msg.text()));
 
-    await page.goto('https://vertexsystems.web.app/', { waitUntil: 'networkidle2' });
+    await page.goto('https://vertexsystemservices.web.app/', { waitUntil: 'networkidle2' });
     await new Promise(r => setTimeout(r, 6000));
     
     // Check if hero is opacity 0
