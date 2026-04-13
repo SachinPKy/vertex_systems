@@ -7,7 +7,7 @@ import puppeteer from 'puppeteer';
     page.on('console', msg => console.log('PAGE LOG:', msg.text()));
     page.on('pageerror', error => console.log('PAGE ERROR:', error.message));
 
-    await page.goto('https://vertex-systems-e46a5.web.app/', { waitUntil: 'load' });
+    await page.goto('https://vertexsystems.web.app/', { waitUntil: 'load' });
     
     await new Promise(r => setTimeout(r, 5000));
     const title = await page.title();

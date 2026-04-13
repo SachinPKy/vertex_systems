@@ -4,7 +4,7 @@ import puppeteer from 'puppeteer';
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto('https://vertex-systems-e46a5.web.app/', { waitUntil: 'load' });
+    await page.goto('https://vertexsystems.web.app/', { waitUntil: 'load' });
     await new Promise(r => setTimeout(r, 6000));
     
     try {

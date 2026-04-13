@@ -13,6 +13,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VERTEX_SYSTEMS_E46A5 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VERTEXSYSTEMS_C63F4 }}'
           channelId: live
-          projectId: vertex-systems-e46a5
+          projectId: vertexsystems-c63f4
