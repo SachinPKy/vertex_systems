@@ -5,7 +5,7 @@ import { ArrowRight, Zap, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
 import { CONTACT_EMAIL, INSTAGRAM_LINK } from '@/lib/constants';
-import { Mail } from 'lucide-react';
+import { Mail, Instagram } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import Logo from '@/components/Logo';
 
